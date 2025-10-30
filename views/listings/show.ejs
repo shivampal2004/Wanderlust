@@ -21,7 +21,7 @@
         </form>
     </div>
     <% } %>
-    <div class="col-8 offset-3">
+    <div class="col-6 offset-3">
         <% if(currUser){ %>
         <hr>
         <h2>Leave a Review</h2>
@@ -50,6 +50,7 @@
             <button class="btn btn-outline-dark mb-3 sub-btn">Submit</button>
         </form>
     <% } %>
+    <% if(listing.reviews.length>0){ %>
         <hr>
         <h2>All Reviews</h2>
             <div class="row">
@@ -71,5 +72,11 @@
                     </div>
                 <% } %>
             </div>
+    <% } %>
+    <hr>
+    </div>
+    <div class="col-6 offset-3 mb-3">
+        <h3>Where you'll be</h3>
+        <div id="map"></div>
     </div>
 </body>

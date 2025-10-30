@@ -1,40 +1,4 @@
 <% layout("/layouts/boilerplate") %>
-
-<style>
-    #filters{
-        margin-top: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .filter{
-        text-align: center;
-        margin: 0 1rem;
-        opacity: 0.8;
-    }
-    .filter:hover{
-        opacity: 1;
-        cursor: pointer;
-    }
-    .filter p{
-        font-size: small;
-    }
-    .tax-info{
-        display: none;
-    }
-    .tax-toggle{
-        border: 1px solid gray;
-        border-radius: 1rem;
-        height: 3rem;
-        padding: 0.7rem;
-    }
-    .filters{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-</style>
-
 <body>
     <!-- <h2>All Listings</h2> -->
     <div class="filters">
@@ -97,17 +61,3 @@
             
         <% } %>
     </div>
-
-    <script>
-        let taxSwitch= document.getElementById("switchCheckReverse");
-        taxSwitch.addEventListener("click", ()=>{
-            let taxInfo= document.getElementsByClassName("tax-info");
-            for(info of taxInfo){
-                if(info.style.display != "inline"){
-                    info.style.display = "inline";
-                } else {
-                    info.style.display = "none";
-                }
-            }
-        })
-    </script>
