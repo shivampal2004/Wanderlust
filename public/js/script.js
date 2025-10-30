@@ -19,12 +19,6 @@
     });
 })();
 
-// MAP
-var map = L.map('map').setView([28.6139, 77.2088], 11);
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; Wanderlust Private Limited'
-    }).addTo(map);
 
 // TAX-SWITCH
 let taxSwitch= document.getElementById("switchCheckReverse");
