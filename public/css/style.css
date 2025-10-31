@@ -125,6 +125,27 @@ body{
     border-radius: 1rem;
 }
 
+.btn-search {
+    background-color: #fe424d;
+    color: #fff;
+    border-radius: 25px;
+}
+
+.btn-search:hover {
+    background-color: #fe424d;
+    color: #fff;
+}
+
+.btn-search i {
+    display: inline;
+    margin-right: 0.5rem;
+}
+
+.search-bar {
+    border-radius: 25px;
+    padding: 0.5rem 3rem;
+}
+
 #map{
     height: 300px;
     width: 100%;
