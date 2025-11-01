@@ -1,47 +1,58 @@
 <% layout("/layouts/boilerplate") %>
 <body>
-    <!-- <h2>All Listings</h2> -->
-    <div class="filters">
-        <div id="filters">
-            <div class="filter">
-                <div><i class="fa-solid fa-fire"></i></div>
-                <p>Trending</p>
+    <nav class="navbar navbar-expand-lg navbar-light filter-bar" style="padding: 0 1rem;">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#filterNavbarContent" aria-controls="filterNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="ms-2 fw-bold d-lg-none">Filters</span> </button>
+
+            <div class="collapse navbar-collapse" id="filterNavbarContent">
+                <div id="filters" class="me-auto py-2 py-lg-0">
+                    <div class="filter">
+                        <div><i class="fa-solid fa-fire"></i></div>
+                        <p>Trending</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-solid fa-bed"></i></div>
+                        <p>Rooms</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-solid fa-cart-flatbed-suitcase"></i></div>
+                        <p>Cart</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-solid fa-car"></i></div>
+                        <p>Parking</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-regular fa-truck"></i></div>
+                        <p>Logistics</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-solid fa-tree-city"></i></div>
+                        <p>Iconic</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-solid fa-person-swimming"></i></div>
+                        <p>Pools</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-brands fa-fort-awesome"></i></div>
+                        <p>Villas</p>
+                    </div>
+                </div>
             </div>
-            <div class="filter">
-                <div><i class="fa-solid fa-bed"></i></div>
-                <p>Rooms</p>
-            </div>
-            <div class="filter">
-                <div><i class="fa-solid fa-cart-flatbed-suitcase"></i></div>
-                <p>Cart</p>
-            </div>
-            <div class="filter">
-                <div><i class="fa-solid fa-car"></i></div>
-                <p>Parking</p>
-            </div><div class="filter">
-                <div><i class="fa-regular fa-truck"></i></div>
-                <p>Logistics</p>
-            </div>
-            <div class="filter">
-                <div><i class="fa-solid fa-tree-city"></i></div>
-                <p>Iconic</p>
-            </div>
-            <div class="filter">
-                <div><i class="fa-solid fa-person-swimming"></i></div>
-                <p>Pools</p>
-            </div>
-            <div class="filter">
-                <div><i class="fa-brands fa-fort-awesome"></i></div>
-                <p>Villas</p>
+
+            <div class="tax-toggle ms-auto">
+                <div class="form-check form-switch form-check-reverse">
+                    <input class="form-check-input" type="checkbox" id="switchCheckReverse">
+                    <label class="form-check-label" for="switchCheckReverse">Display total after taxes</label>
+                </div>
             </div>
         </div>
-        <div class="tax-toggle">
-            <div class="form-check form-switch form-check-reverse">
-                <input class="form-check-input" type="checkbox" id="switchCheckReverse">
-                <label class="form-check-label" for="switchCheckReverse">Display total after taxes</label>
-            </div>
-        </div>
-    </div>
+    </nav>
+
     <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
         <% for(let listing of allListings){ %>
             <a href="/listings/<%= listing._id %>" class="listing-link">
@@ -60,3 +71,4 @@
             </a>
         <% } %>
     </div>
+</body>
