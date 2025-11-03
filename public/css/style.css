@@ -211,19 +211,3 @@ body{
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 }
-
-/* This selector is correct */
-@media (max-width: 991.98px) {
-    .navbar .navbar-collapse {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        z-index: 100;
-        background-color: #f8f9fa;
-        padding: 1rem;
-        margin-top: 0.5rem;
-        border-radius: 0.25rem;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-}
